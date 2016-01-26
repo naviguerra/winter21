@@ -1,1 +1,561 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Sam "Big Sammy" Greene</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: green;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: blue;
+      font-size: 50px;
+  }
+  .logo {
+      color: blue;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid blue; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: blue;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: green;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;  
+      animation-duration: 1s; 
+      -webkit-animation-duration: 1s;
+      visibility: visible;      
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    } 
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage"> <img src="http://www.rich-piana.com/content/images/thumbs/0000448_window-decal-red.png" width="40" height="30"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">Life</a></li>
+        <li><a href="#services">Hobbies/Lifting</a></li>
+        <li><a href="#portfolio">Associates</a></li>
+        <li><a href="#pricing">Conspiracies</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Sam "Big Sammy" Greene</h1> 
+  <p>He has the Bi's the Take Lives and Steal Wives</p> 
+  <form class="form-inline">
+    <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+    <button type="button" class="btn btn-danger">Subscribe</button>
+  </form>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>The Life of Big Sammy</h2><br>
+      <h4>Sam has led an interesting life, one filled with joy, happiness, testosterone, and friends. While he hasn't left the gym in more than five years, he has managed to maintain his personal high academic standards. When he is not lifting he is probably tracking his macros so he can stay below five percents body fat. He is truely a visionary in a dark world filled with manlets and lancklets alike, always struggling to make gains. Sam Greene, of course, does not have any such problems for his dedication remains unmatched by anyone other than his hero, Rich Piana.</h4><br>
+      <h3>Lifting With Big Sammy</h3><br>
+      <p>Sam Greene has invented a revolutionary training regiment designed to add up to 50 pounds of lean muscle to just about anyone (who has the dedication) in under two months. The split is as follows.</p>
+      <div class="container-fluid bg-3 text-center">    
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Monday</p>
+      <img src="https://i.ytimg.com/vi/zS6X3AavtBA/maxresdefault.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>Tuesday</p>
+      <img src="http://media.tumblr.com/f598ce96d6c04cf798fa65559bf2d665/tumblr_inline_mpsgxzCNED1qz4rgp.png" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>Wednesday</p>
+      <img src="http://over-training.com/wp-content/uploads/2015/09/bodybuilding_arm_day_athlete_sport_poster-r8748597e0f074f9cb1dace38cd0c7318_w2g_8byvr_512.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Thursday</p>
+      <img src="http://media.tumblr.com/f598ce96d6c04cf798fa65559bf2d665/tumblr_inline_mpsgxzCNED1qz4rgp.png" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>Friday</p>
+      <img src="https://i.ytimg.com/vi/zS6X3AavtBA/maxresdefault.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>Saturday</p>
+      <img src="http://media.tumblr.com/f598ce96d6c04cf798fa65559bf2d665/tumblr_inline_mpsgxzCNED1qz4rgp.png" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Sunday</p>
+      <img src="http://over-training.com/wp-content/uploads/2015/09/bodybuilding_arm_day_athlete_sport_poster-r8748597e0f074f9cb1dace38cd0c7318_w2g_8byvr_512.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>Notes</p>
+      <img src="http://repeatuntildeath.com/images/repeat_until_death-logo-501x555.png" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+  </div>  
+</div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <p>As you can see, this training method has never been used before, but it only works in conjuction with an proper nutrition and sleep. The alternating of bi's and chest utilises muscle confusion to increase mass at an expensional rate. Sam Greene highly recomends the us of diannabol and trenbolone. Takeing advantage of regular rest days enhanses muscle confusion by optimizing the anabolic window. Sam Greene is always careful to eate less than 20 grams of protien per meal, as it is well known that the body cannot synthesise any more. Functional strength is key above else.</p><br>
+    </div>  
+    </div>
+      <br><button class="btn btn-default btn-lg">Get in Touch</button>
+    </div>
+    <div class="col-sm-4">
+      <img src="https://scontent-iad3-1.xx.fbcdn.net/hphotos-ash2/v/t1.0-9/994576_210065355819366_339402215_n.jpg?oh=401f0c75dbec16bbb68c0e4f7b24d0b5&oe=57412E79" width="400" height ="300">
+      <br>
+      <br>
+      </div>
+    <div class="col-sm-4"> 
+      <img src="https://scontent-iad3-1.xx.fbcdn.net/hphotos-xla1/v/t1.0-9/488379_4234879106220_620718114_n.jpg?oh=a17e5e0af949ea6714c41fe89cd6daf3&oe=57384AED" width="250" height ="300">
+      </div>
+    <div class="col-sm-4"> 
+      <br>
+      <img src="https://scontent-iad3-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/263036_121022537989245_8350781_n.jpg?oh=d86e6139c7680dc2d1724bd9ab2d5d75&oe=573BBAB5" width="250" height ="300">
+      </div>
+      <div class="col-sm-4"> 
+      <br>
+      <img src="https://scontent.xx.fbcdn.net/hphotos-xlp1/v/t1.0-9/1010618_550431821714979_603409907_n.jpg?oh=42450fc2c87e00795ec838636e4e1358&oe=57378052" width="400" height ="300">
+      </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>Hobbies</h2>
+  <h4>What Sam Greene Does</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <img src="http://www.wpclipart.com/recreation/fitness/weights/power_lifting.png" width="100">
+      <h4>Lifting</h4>
+      <p>Sam Greene Enjoys Lifting Incredibly Heavy Weights</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="http://images.rapgenius.com/ed3ec4365eebde800e92307e1d80f930.512x512x1.png" width="75">
+      <h4>Sleeping</h4>
+      <p>He is Also Commonly Found Lying Face Down on Surfaces</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="http://www.stickthisgraphics.com/images/Boxing%20Silhouette%201%20(Small).jpg" width="90">
+      <h4>Boxing</h4>
+      <p>Sam Greene has Been Commonly Seen Out Boxing Men Twice his Size</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQzPMn0fvCDL0Eh9b757sn25INda2h5gs6Z_EKForPgSKj1ptZn" width="100">
+      <h4>Backpacking</h4>
+      <p>It has been Noted that Sam will Walk Incredible Distances for No Apparent Reason</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="http://cache2.asset-cache.net/xd/91307012.jpg?v=1&c=IWSAsset&k=2&d=62CA815BFB1CE4805DD20A4576BDF776D6D7111452E48A1730033F84EF7104E742870D6236488A09" width="180">
+      <h4>Eating</h4>
+      <p>Sam Greene is Commonly Found Eating Thousands of Calories of Healthy Whole Foods</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="http://cdn5.kozzi.com/b1/12/410/photo-24744458-silhouette-of-a-man-flexing-biceps..jpg" width="160">
+      <h4 style="color:#303030;">Flexing</h4>
+      <p>He is Commonly Found Working on his Posing Routine and Aesthetic Positions </p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Aquantences</h2>
+  <h4>Those who Sam Associates With</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+        <img src="https://scontent-mia1-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/397890_301705163294920_1393530947_n.jpg?oh=4128c6092b8ee5b7eb24b55fc488e685&oe=570260E3" width="300">
+        <p><strong>Sterling Voth</strong></p>
+        <p>Commonly Reffered to as the Social Chameleon</p>
+    </div>
+    <div class="col-sm-4">
+        <img src="https://scontent-mia1-1.xx.fbcdn.net/hphotos-prn2/v/t1.0-9/604037_290410841091019_1533300390_n.jpg?oh=e3064f1d133e5ae0baf5d5f61d332ca6&oe=57400701" alt="New York" width="230" height="400">
+        <p><strong>Sam Shethar</strong></p>
+        <p>Basically a Smaller Weaker Sam Greene</p>
+    </div>
+    <div class="col-sm-4">
+        <img src="https://scontent-mia1-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/1743750_270195366477855_198199623_n.jpg?oh=79746908a98ec60ab374102c467c1646&oe=56FE9A71" alt="San Francisco" height="400">
+        <p><strong>Elaine Stachowiak</strong></p>
+        <p>Nough Said</p>
+    </div>
+  </div><br>
+
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+        <img src="https://scontent-mia1-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/1555397_585958864818273_1191811279_n.jpg?oh=229a27027fc9c4611a50cfa7d7d0c3ed&oe=573E5CB2" height="400">
+        <p><strong>Alex Jahn</strong></p>
+        <p>A Little Downsy on Occasion</p>
+    </div>
+    <div class="col-sm-4">
+        <img src="https://scontent-mia1-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/420136_442834685761628_739514302_n.jpg?oh=5c039329d78872620968750d3c0ff8f9&oe=57001623" alt="New York" height="400">
+        <p><strong>Navi Guerra</strong></p>
+        <p>Bigger than Life</p>
+    </div>
+  </div><br>
+  
+  <h2>What Friends have Said...</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"He is F&@!%^*$# HUGE!!!"<br><span style="font-style:normal;">Sam Shethar, Reliabale Source</span></h4>
+      </div>
+      <div class="item">
+        <h4>"One word... WOW!!"<br><span style="font-style:normal;">Elaine</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Up the Tren"<br><span style="font-style:normal;">Owen Brower, Enhanced Lifter</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Conspiracies</h2>
+    <h4>Untrue Statments about Sam Greene</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Sam Greene is Not Lean or Huge</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>False</strong></p>
+        </div>
+        <div class="panel-footer">
+          <h3>Sam Greene is less than 5% body fat and has worked for years to achieve the mass he enjoys today.</h3>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Sam Greene is on Steroids</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>False</strong></p>
+        </div>
+        <div class="panel-footer">
+          <h3>Sam Greene is 100% natural and attributes his success to unmatches, superior genetics.</h3>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Sam Greene Skips Leg Day at the Gym</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Fase</strong></p>
+        </div>
+        <div class="panel-footer">
+          <h3>Sam Greene does do legs but only on the vernal equanox to get maximum work in with less time.</h3>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Sam Greene is not available for his is currently lifting.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Unkown</p>
+      <p><span class="glyphicon glyphicon-phone"></span> Unknown</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> samgreene@seattleacademy.org</p>    
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>  
+    </div>
+  </div>
+</div>
+
+<div id="googleMap" style="height:400px;width:100%;"></div>
+
+<!-- Add Google Maps -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(84.348167, 103.839401);
+
+function initialize() {
+var mapProp = {
+  center:myCenter,
+  zoom:12,
+  scrollwheel:false,
+  draggable:false,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="http://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>   
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
